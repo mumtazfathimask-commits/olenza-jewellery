@@ -1,0 +1,135 @@
+body{
+    font-family: "Bodoni MT", "Times New Roman", serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+
+    background: linear-gradient(-45deg, #fffaf7, #fff7fb, #fffdf5, #fff9f0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.brand-name{
+    font-family: "Bodoni MT", "Times New Roman", serif;
+    font-size: 42px;
+    color: #881e09;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+.since{
+    font-size: 18px;
+    color: #b8860b;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.about-btn{
+    display: inline-block;
+    background: #b8860b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.about-btn:hover{
+    background: #9c7209;
+}
+
+.section-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    clear: both;
+
+    font-family: "Bodoni MT", "Times New Roman", serif;
+    color: #3a1401;
+    font-size: 28px;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product{
+    width: 220px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.product img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product img:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* Offer Price */
+.product p{
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+/* Original Price */
+.product del{
+    color: #c9a07a;
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+button{
+    background: #b8860b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Bodoni MT", "Times New Roman", serif;
+}
+
+button:hover{
+    background: #9c7209;
+}
+
+@media (max-width: 768px){
+    .product{
+        width: 45%;
+        padding: 10px;
+    }
+
+    .brand-name{
+        font-size: 32px;
+    }
+
+    .section-title{
+        font-size: 24px;
+    }
+
+    .since{
+        font-size: 16px;
+    }
+}
