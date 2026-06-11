@@ -16,7 +16,6 @@ body{
 }
 
 .brand-name{
-    font-family: "Bodoni MT", "Times New Roman", serif;
     font-size: 42px;
     color: #881e09;
     margin-bottom: 10px;
@@ -52,22 +51,24 @@ body{
     margin-top: 40px;
     margin-bottom: 20px;
     clear: both;
-
-    font-family: "Bodoni MT", "Times New Roman", serif;
-    color: #3a1401;
     font-size: 28px;
+    color: #3a1401;
 }
 
-/* PRODUCTS GRID (2 per row fix) */
+/* ===== PRODUCTS GRID FIX ===== */
 .products{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .product{
-    width: calc(50% - 20px);
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -85,7 +86,7 @@ body{
     transform: scale(1.03);
 }
 
-/* Offer Price */
+/* Price */
 .product p{
     margin: 10px 0;
     font-size: 22px;
@@ -93,14 +94,13 @@ body{
     color: #8b4513;
 }
 
-/* Original Price */
 .product del{
     color: #c9a07a;
     font-size: 18px;
-    font-weight: normal;
     margin-right: 8px;
 }
 
+/* Button */
 button{
     background: #b8860b;
     color: white;
@@ -109,7 +109,6 @@ button{
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: "Bodoni MT", "Times New Roman", serif;
     transition: 0.3s;
 }
 
@@ -117,10 +116,11 @@ button:hover{
     background: #9c7209;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px){
     .product{
-        width: calc(50% - 20px);
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
 
     .brand-name{
@@ -138,6 +138,7 @@ button:hover{
 
 @media (max-width: 480px){
     .product{
-        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
