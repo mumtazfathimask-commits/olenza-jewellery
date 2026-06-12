@@ -142,3 +142,35 @@ button:hover{
         max-width: 100%;
     }
 }
+.coming-soon{
+    font-family: "Bodoni MT", serif;
+    font-size: 38px;
+    color: #b8860b;
+    margin-top: 60px;
+    text-shadow:
+        2px 2px 0px #e6c67a,
+        4px 4px 8px rgba(0,0,0,0.15);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.coming-text{
+    font-size: 18px;
+    color: #8b4513;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:
+            2px 2px 0px #e6c67a,
+            4px 4px 8px rgba(0,0,0,0.15);
+    }
+
+    to{
+        text-shadow:
+            2px 2px 0px #f5deb3,
+            0px 0px 15px rgba(184,134,11,0.5);
+    }
+}
