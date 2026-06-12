@@ -153,24 +153,34 @@ button:hover{
     animation: glow 2s ease-in-out infinite alternate;
 }
 
+.coming-soon{
+    font-family: "Bodoni MT", serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #b8860b;
+    margin-top: 60px;
+    margin-bottom: 15px;
+
+    text-shadow:
+        1px 1px 0 #fff,
+        2px 2px 0 #f7d77a,
+        3px 3px 0 #d4a017,
+        4px 4px 8px rgba(0,0,0,0.25);
+
+    animation: glow 2s infinite alternate;
+}
+
 .coming-text{
     font-size: 18px;
     color: #8b4513;
-    margin-top: 10px;
-    margin-bottom: 40px;
     font-style: italic;
 }
 
 @keyframes glow{
     from{
-        text-shadow:
-            2px 2px 0px #e6c67a,
-            4px 4px 8px rgba(0,0,0,0.15);
+        transform: scale(1);
     }
-
     to{
-        text-shadow:
-            2px 2px 0px #f5deb3,
-            0px 0px 15px rgba(184,134,11,0.5);
+        transform: scale(1.05);
     }
 }
